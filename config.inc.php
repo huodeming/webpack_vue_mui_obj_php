@@ -1,4 +1,5 @@
 <?php
+session_start();
 $dns = 'mysql:host=localhost;dbname=webpack_vue_mui_obj_php';
 
 $db_user = 'root';
@@ -12,6 +13,20 @@ try{
     echo '数据库连接出错了!';
     echo $e->getMessage();
 }
+
+//获取客户端请求头信息,主要是获取Origin的域名,以方便设置ajax跨域时带cookie.
+if (!function_exists('getallheaders')) {
+    function getallheaders() {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+        return $headers;
+    }
+}
+$origin_domain = isset(getallheaders()['Origin']) ? getallheaders()['Origin'] : '*';
 
 
 ?>

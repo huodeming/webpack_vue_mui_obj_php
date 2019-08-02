@@ -1,6 +1,1 @@
-array (
-  'mid' => '1',
-  'cid' => '1',
-  'p' => '1',
-  'callback' => '_jsonp7qmj3stmgbf',
-)
+{"Cookie":"PHPSESSID=dc12hpoe5pd7vgfgtlciqhuo8b","Accept-Language":"en-us,en;q=0.8","Accept-Encoding":"gzip,deflate","User-Agent":"Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/35.0.1916.138 Safari\/537.36","Pragma":"no-cache","Accept":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","Cache-Control":"no-cache","Connection":"close","Host":"localhost"}

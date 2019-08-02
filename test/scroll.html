@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue监听滚动条</title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#app{
+				border: 1px solid red;
+				width: 80%;
+				height: 1000px;
+				position: absolute;
+			}
+			#app>div{
+				border: 1px solid green;
+				position: fixed;
+				width: 50px;
+				height: 100px;
+				top: 30px;
+				left: 30px;
+				z-index: 99;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<div>{{top}}</div>
+				<div>{{hei}}</div>
+				<div>{{dwh}}</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				top:0,
+				hei:0,
+				dwh:0,
+			},
+			methods:{
+				scrollEVE:function(e){
+					console.log(e.target.scrollTop);
+					this.top = document.documentElement.scrollTop;
+				}
+			},
+			created() {
+				
+			},
+			mounted() {
+				this.hei = $(window).height();
+				this.dwh = $(document).height();
+				window.addEventListener('scroll',this.scrollEVE);
+			}
+		})
+		
+	</script>
+	
+</html>
