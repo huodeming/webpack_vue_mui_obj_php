@@ -9,7 +9,7 @@
 		die(json_encode($arr));
 	}
 	$cid = $_GET['cid'];//新闻ID,外键
-	$mid = $_GET['mid'];//模块ID,1新闻
+	$mid = $_GET['mid'];//模块ID,1新闻,2图片
 	$page = empty($_GET['p']) ? 1 : $_GET['p'];//加载第几页
 	
 	$sql = "SELECT id,c_time,content FROM comment WHERE cid=? AND mid=? ORDER BY id DESC LIMIT ?,?";
