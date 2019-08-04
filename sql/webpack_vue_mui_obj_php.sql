@@ -33,42 +33,98 @@ CREATE TABLE IF NOT EXISTS comment(
 	,content VARCHAR(120)
 )ENGINE=MYISAM DEFAULT CHARSET=UTF8 COMMENT '留言表';
 
-INSERT INTO comment(cid,mid,content) VALUE('1','1','2.4配置访问权限:允许所有，拒绝个别ip（类似黑名单）<RequireAll> Require all granted  Require not ip 192.168.8.106 192.168.8.105 </RequireAll>');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','拒绝所有，允许个别ip（类似白名单） Require all denied  Require ip 192.168.8.107 192.168.8.105');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','根目录（document root）的描述写在httpd.conf里，写在httpd-vhosts.conf无效。');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第4条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第5条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第6条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第7条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第8条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第9条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第10条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第11条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第12条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第13条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第14条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第15条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第16条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第17条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第18条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第19条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第20条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第21条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第22条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第23条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第24条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第25条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第26条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第27条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第28条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第29条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第30条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第31条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第32条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第33条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第34条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第35条评论');
-INSERT INTO comment(cid,mid,content) VALUE('1','1','第36条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','2.4配置访问权限:允许所有，拒绝个别ip（类似黑名单）<RequireAll> Require all granted  Require not ip 192.168.8.106 192.168.8.105 </RequireAll>');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','拒绝所有，允许个别ip（类似白名单） Require all denied  Require ip 192.168.8.107 192.168.8.105');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','根目录（document root）的描述写在httpd.conf里，写在httpd-vhosts.conf无效。');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第4条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第5条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第6条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第7条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第8条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第9条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第10条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第11条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第12条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第13条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第14条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第15条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第16条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第17条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第18条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第19条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第20条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第21条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第22条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第23条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第24条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第25条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第26条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第27条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第28条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第29条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第30条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第31条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第32条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第33条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第34条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第35条评论');
+-- INSERT INTO comment(cid,mid,content) VALUE('1','1','第36条评论');
 -- INSERT INTO comment(cid,mid,content) VALUE('1','1','');
+
+-- ==========================================================================================
+CREATE TABLE IF NOT EXISTS img_group(
+gid INT PRIMARY KEY AUTO_INCREMENT
+,gname VARCHAR(20)
+,status TINYINT(1) DEFAULT 1
+);
+-- INSERT INTO img_group(gname) VALUES('性感美女'),('自然风景'),('美食吃货'),('汽车组图'),('家装家居'),('桌面壁纸'),('动物萌宠');
+
+-- ==========================================================================================
+CREATE TABLE IF NOT EXISTS img_main(
+id INT PRIMARY KEY AUTO_INCREMENT
+,title VARCHAR(50)
+,uid INT
+,c_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+,m_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+,count INT DEFAULT 0
+,remarks VARCHAR(500)
+);
+INSERT INTO img_main(title,uid,remarks) VALUE('回眸一笑百媚生','1','上次爸妈吵架，吵得不可开交的，我和我七岁的弟弟在旁边看也不敢劝，他们两个你一句我一句地骂，突然老妈词穷了一时语塞，我弟看着老妈说：妈妈，快点，该你啦！');
+INSERT INTO img_main(title,uid,remarks) VALUE('六宫粉黛无颜色','1',' 一天，一个小伙子到一家小餐馆吃饭，看到一位漂亮的女孩子坐在那里让他怦然心动，小伙子鼓起勇气走上前跟女孩子搭讪：“你好，你叫什么？”女孩头也不抬地说：“牛肉面，快一点！”');
+INSERT INTO img_main(title,uid,remarks) VALUE('去年今日此门中','1','有一次给我妈吵架呢，我妈没吵过我，把我打了。正好我爸回来了，我就冲我爸说：“你小情人被你媳妇打了，你还管不管？”我爸一脸苍白对我说：“你怎么不拉住你妈呀！”');
+INSERT INTO img_main(title,uid,remarks) VALUE('人面桃花相映红','1','闺女上幼儿园，总不爱写作业，每次都是监督着才写。早上送她去上学，路上跟她开玩笑说：不如今天别上学了，回家玩吧。没想到她说：你昨天晚上怎么不说？不去上学作业不是白写了！');
+INSERT INTO img_main(title,uid,remarks) VALUE('北方有佳人，绝世而独立','1','晚上忙着做饭，两岁的小侄子把门打开要出去玩，我喊他回来他不听，我只能吓唬他说：“快回来，外面有狗。”等我跑过去拉他抬头一看，对门的小姐姐一脸哀怨的看着我！');
+INSERT INTO img_main(title,uid,remarks) VALUE('一顾倾人城，再顾倾人国','1',' 昨天买西瓜，旁边大哥掏钱时掉出五十块钱，还没等大哥弯腰去捡，我家二哈跑过去一屁股蹲在钱上，怎么叫都不动，，没办法我只能从包里拿出五十块钱递给大哥。。大哥刚转身准备离开，我家傻狗站起来叼起地上的五十块钱跑去旁边的炸鸡店…');
+INSERT INTO img_main(title,uid,remarks) VALUE('待到山花烂漫时','1','前两天，哥几个聚会，我给他们说：“每次媳妇让我买菜，我都虚报价格，然后给自己买两盒好烟，你们有这脑子吗？这叫智慧 ，你们呢？”他们说，他们自己有钱，都....自己买。');
+INSERT INTO img_main(title,uid,remarks) VALUE('她在丛中笑','1','第一次去见女友父母，吃饭的时候她妈问：“现在消费那么高，小伙子每个月能挣多少钱呀？”我叹了口气：“唉，没多少，跟要饭的差不多。”她妈一听，高兴地说：“那岂不是每个月赚好几万？不错啊！”我...');
+INSERT INTO img_main(title,uid,remarks) VALUE('银烛秋光冷画屏','1','去家门口米线店吃早餐，付完钱我拿了号牌就出顺屁股坐到旁边的位置上，突然我看到地上有五十元钱。我立马站起来一脚踩上去，装做系鞋带，悄悄把钱拿到手心里，从容的站起来。这时候吧台里面传出来老板娘的话：小伙子，别那么紧张。那是你自己掉的。');
+INSERT INTO img_main(title,uid,remarks) VALUE('轻罗小扇扑流萤','1','“小珍，你能说出你爸爸今年多大了吗？”幼儿园的老师问。“爸爸今年五岁了。”小珍答道。老师笑了：“小珍，再想一想，难道你爸爸和你一样大？”“是的，我爸爸亲口对我说过，他是从我出生那天开始当爸爸的。”');
+INSERT INTO img_main(title,uid,remarks) VALUE('蛾儿雪柳黄金缕','1','某地干旱五月，一农夫遂去问一江湖术士何时有雨，片刻江湖术士递给农夫一折叠好的纸条，并语：因为天机不可泄漏，只有等到下雨那天才能打开看。不久下雨了，农夫遂把纸条打开一看，只见上面写着—今日有雨，农夫感叹，真准。');
+
+INSERT INTO img_main(title,uid,remarks) VALUE('笑语盈盈暗香去','1','女人的世界真心搞不懂啊！昨晚媳妇儿正看电视剧，10点半我让她上床，她不情愿地关了电视.....后来我们就吵架了，到最后搞明白，原因是她关了电视我没夸她真听话。');
+INSERT INTO img_main(title,uid,remarks) VALUE('纤腰婉约步金莲','1','客户给我转账，本来应该6000多结果到账87万多，我都震惊了，连忙打电话过去，原来是不小心把验证码当输成金额了。真是贫穷限制了我的想象。。。');
+INSERT INTO img_main(title,uid,remarks) VALUE('妖君倾国，犹自至今传','1','和老公看电视，一男的对一女的说：你别那么凶，知道吗温柔是女人最漂亮的衣服。听完这句话，老公看着我幽幽的说道：媳妇，你连条裤衩都没有啊！我。。。');
+INSERT INTO img_main(title,uid,remarks) VALUE('妆成不整金钿','1','前段时间，一妹子的签名这样写：我爱你，不是因为你开兰博基尼，住海边别墅，而是那天阳光正好，你穿着一件我喜欢的白衬衫，对，爱情就这么简单。今天她又更新了签名，这样写的：我离开你不是因为你的别墅是租的，兰博基尼是借的，是那天你穿了一双绿袜子，那不是我喜欢的颜色，对，爱情就这么简单。');
+INSERT INTO img_main(title,uid,remarks) VALUE('含羞待月秋千','1','昨晚在家里，跟老婆打闹，失手，不小心把老婆打疼了，老婆含着眼泪问我，想怎么死？我回答：用钱砸死我吧！然后，她把儿子的两个大存钱罐拿了过来。。。');
+INSERT INTO img_main(title,uid,remarks) VALUE('鲛绡雾縠笼香雪','1','我小时候曾经干过一件很残忍的事：跟邻家女孩过家家拜堂成亲，结婚嘛，就要办酒席吧。于是把婶婶家刚出窝的一群小鸡12只杀个精光，办了一桌全鸡宴。据说那天全村都听到了我的嚎叫声……');
+-- INSERT INTO img_main(title,uid,remarks) VALUE('','1','');
+-- ==========================================================================================
+
+CREATE TABLE IF NOT EXISTS img_list(
+	id INT PRIMARY KEY AUTO_INCREMENT COMMENT '标识,主键'
+	,cid INT COMMENT '图片文章(主题),图片来自于哪个文章发表...'
+	,gid INT COMMENT '图片分类'
+	,title VARCHAR(200) COMMENT '标题'
+	,img_url VARCHAR(500) COMMENT '路径'
+	,img_url_min VARCHAR(500) COMMENT '缩略图路径'
+	,zhaiyao VARCHAR(200) COMMENT '图片简短说明(摘要)'
+);
+-- 刚开始没有注意这个主题.....加一列上去
+-- ALTER TABLE img_list ADD cid INT COMMENT '图片文章(主题),图片来自于哪个文章发表...'  AFTER id;
+-- ALTER TABLE img_list ADD img_url_min VARCHAR(500) AFTER img_url;
+
+
+
+
 
 
